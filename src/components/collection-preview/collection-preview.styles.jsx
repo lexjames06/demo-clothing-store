@@ -6,11 +6,13 @@ export const CollectionPreviewContainer = styled.div`
 `;
 
 export const TitleText = styled.h1`
-    display: flex;
-    flex-direction: column;
+    width: fit-content;
+    font-size: 28px;
+    margin-bottom: 25px;
+    cursor: pointer;
 
     &:hover {
-        cursor: pointer;
+        color: grey;
     }
 `;
 

@@ -10,9 +10,11 @@ import { CollectionsOverviewContainer } from './collections-overview.styles';
 const CollectionsOverview = ({ collections }) => (
     <CollectionsOverviewContainer>
         {
-            collections.map(({ id, ...otherCollectionProps }) => (
-                <CollectionPreview key={id} {...otherCollectionProps} />
-            ))
+            collections
+                .sort((a, b) => a.items[0].id - b.items[0].id)
+                .map(({ id, ...otherCollectionProps }) => (
+                    <CollectionPreview key={id} {...otherCollectionProps} />
+                ))
         }
     </CollectionsOverviewContainer>
 );
