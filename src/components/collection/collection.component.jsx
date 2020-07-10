@@ -14,7 +14,7 @@ const CollectionPage = ({ collection }) => {
     const { title, items } = collection;
     return (
         <CollectionPageContainer>
-            <TitleText>{title}</TitleText>
+            <TitleText>{title.toUpperCase()}</TitleText>
             <ItemsContainer>
                 {items.map(item => (
                     <CollectionItem className='collection-item' key={items.id} item={item} />
